@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f5f7" />
+  <title>Rubric · 코드 채점 스튜디오</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/programming-theme.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Rubric 홈">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 7.5h16M8 13h10M8 18.5h16M8 24h10"/><circle cx="23" cy="13" r="2.5"/><circle cx="21" cy="24" r="2.5"/></svg></span>
+        <span>rubric<span class="brand-period">.</span></span>
+        <span class="brand-tag">STUDIO</span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <button class="workspace-switch"><span class="workspace-avatar">CS</span><span><strong>컴퓨터과학부</strong><small>개인 워크스페이스</small></span><span class="chevron">⌄</span></button>
+      <div class="side-section-label">채점 작업</div>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <button class="nav-item active" data-tab="config"><span class="nav-icon">01</span><span>시험 설정</span><span class="nav-check">✓</span></button>
+        <button class="nav-item" data-tab="submissions"><span class="nav-icon">02</span><span>제출물 채점</span><span class="nav-count" id="nav-submission-count">0</span></button>
+        <button class="nav-item" data-tab="dashboard"><span class="nav-icon">03</span><span>결과 대시보드</span></button>
+      </nav>
+      <div class="side-divider"></div>
+      <div class="side-section-label">현재 시험</div>
+      <div class="exam-summary"><span class="summary-dot"></span><div><strong id="sidebar-exam-title">알고리즘 실기 평가</strong><small id="sidebar-exam-meta">3개 문항 · 100점 만점</small></div></div>
+      <div class="sidebar-spacer"></div>
+      <div class="api-card"><div class="api-card-top"><span class="api-spark">✳</span><span>AI ENGINE</span><span class="api-dot" id="api-dot"></span></div><strong>Gemini Flash</strong><p id="api-status-text">연결 상태 확인 중</p><button class="api-help" id="api-help">연결 도움말 <span>↗</span></button></div>
+      <div class="profile"><span class="profile-avatar">김</span><span><strong>김서연</strong><small>교수자 계정</small></span><button aria-label="계정 메뉴">···</button></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumbs"><span>내 워크스페이스</span><b>/</b><strong>코드 채점 스튜디오</strong></div><div class="topbar-right"><span class="saved-indicator"><i></i> 자동 저장됨</span><button class="icon-button" aria-label="알림">♧<span class="notification-dot"></span></button><span class="top-avatar">김</span></div></header>
+      <div class="page-wrap">
+        <section class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>ASSESSMENT WORKSPACE <span class="eyebrow-id"># EX-2025-04</span></div><h1 id="page-title">시험 설정</h1><p id="page-description">채점 기준을 정의하고 학생 코드를 일관되게 평가하세요.</p></div><button class="outline-button" id="reset-demo"><span>↻</span> 샘플 루브릭 적용</button></section>
+        <section class="tab-panel active" id="panel-config">
+          <div class="stepper"><div class="step current"><span>01</span><div><strong>문제 & 채점 기준</strong><small>평가 루브릭 구성</small></div></div><span class="step-line"></span><div class="step"><span>02</span><div><strong>제출물 업로드</strong><small>학생 파일 가져오기</small></div></div><span class="step-line"></span><div class="step"><span>03</span><div><strong>결과 검토</strong><small>리포트 및 내보내기</small></div></div></div>
+          <div class="config-layout"><div class="config-main">
+            <div class="section-head"><div><span class="section-kicker">EXAM SETUP</span><h2>시험 기본 정보</h2><p>이번 평가를 구분할 이름과 시험 자료를 등록하세요.</p></div><span class="autosave-label"><i></i> 자동 저장</span></div>
+            <div class="upload-prompt" id="exam-upload-zone" aria-live="polite"><div class="upload-prompt-icon">↑</div><div><strong>시험지 PDF를 올리면 문항과 채점 기준을 자동으로 등록합니다</strong><span>PDF를 끌어다 놓거나 선택하세요. 문항, 배점, 필수 함수, 복잡도, 테스트 기준을 추출해 기존 목록을 교체합니다.</span></div><button class="outline-button" id="select-exam-file">PDF 파일 선택</button><input id="exam-file" type="file" accept=".pdf,.txt,.md,.markdown" hidden /></div>
+            <div class="form-card exam-fields"><label class="field-label" for="exam-title">시험 이름</label><input id="exam-title" class="text-input" value="알고리즘 실기 평가" placeholder="예: 자료구조 중간고사"/><div class="field-foot"><span>업로드한 파일명으로 자동 설정되며 수정할 수 있습니다.</span><span><b id="question-count">3</b>개 문항 · <b id="total-points">100</b>점</span></div></div>
+            <div class="section-head question-head"><div><span class="section-kicker">SCORING RUBRIC</span><h2>문항 및 채점 기준 <span class="count-pill" id="question-pill">03</span></h2><p>PDF에서 추출한 기준을 확인하고 필요하면 수정하세요.</p></div><button class="add-button" id="add-question"><span>＋</span> 문항 추가</button></div>
+            <div class="question-list" id="question-list"></div>
+            <div class="bottom-actions"><span class="save-note"><span class="save-check">✓</span> 변경 내용이 이 브라우저에 저장됩니다.</span><button class="primary-button" data-go="submissions">제출물 설정으로 <span>→</span></button></div>
+          </div><aside class="config-aside"><div class="aside-card score-card"><div class="aside-card-title"><span>◈</span> 평가 요약</div><div class="score-total"><strong id="aside-total">100</strong><span>점 만점</span></div><div class="score-meter"><span id="score-meter-fill"></span></div><div class="score-stats"><div><span>문항 수</span><strong id="aside-question-count">03</strong></div><div><span>문항당 평균</span><strong id="aside-average">33.3<span>점</span></strong></div></div><div class="score-divider"></div><p class="aside-hint"><span>✳</span> 배점 합계가 100점이 아니어도 괜찮아요. 모든 점수는 자동으로 환산됩니다.</p></div><div class="aside-card tips-card"><div class="tips-icon">✦</div><strong>좋은 루브릭을 만드는 팁</strong><p>필수 함수와 동작 조건을 구체적으로 작성하면 더 일관된 채점 결과를 얻을 수 있어요.</p><button class="text-button" id="rubric-tip">가이드 보기 <span>→</span></button></div><div class="security-note"><span>▣</span><p>학생 코드와 시험 내용은 평가를 위해 Wandbox와 Gemini로 전송됩니다. 외부 전송이 허용된 자료만 올려 주세요.</p></div></aside></div>
+        </section>
+
+        <section class="tab-panel" id="panel-submissions">
+          <div class="stepper"><div class="step complete"><span>✓</span><div><strong>문제 & 채점 기준</strong><small>평가 루브릭 구성</small></div></div><span class="step-line complete-line"></span><div class="step current"><span>02</span><div><strong>제출물 업로드</strong><small>학생 파일 가져오기</small></div></div><span class="step-line"></span><div class="step"><span>03</span><div><strong>결과 검토</strong><small>리포트 및 내보내기</small></div></div></div>
+          <div class="section-head"><div><span class="section-kicker">STUDENT SUBMISSIONS</span><h2>학생 제출물</h2><p>학생별 코드 파일을 업로드하면 문항별로 자동 분류합니다.</p></div><span class="upload-count" id="upload-count">아직 업로드된 파일이 없습니다</span></div>
+          <div class="submission-layout"><div class="submission-main"><div class="dropzone" id="submission-dropzone"><input id="submission-files" type="file" accept=".zip,.js,.ts,.py,.java,.cpp,.c,.cs,.go,.rs,.php,.rb,.txt,.html,.css,.jsx,.tsx,.ipynb" multiple hidden/><input id="submission-folder" type="file" accept=".js,.ts,.py,.java,.cpp,.c,.cs,.go,.rs,.php,.rb,.txt,.html,.css,.jsx,.tsx,.ipynb" multiple webkitdirectory directory hidden/><div class="drop-visual"><span class="file-orbit orbit-one"></span><span class="file-orbit orbit-two"></span><span class="file-symbol">↥</span></div><h3>제출 파일을 여기에 놓으세요</h3><p>ZIP 파일 또는 제출 폴더를 업로드할 수 있습니다.<br/>학생별·문항별 파일이 자동으로 정리됩니다.</p><div class="upload-choice-buttons"><button class="outline-button" id="choose-submissions">ZIP / 파일 선택</button><button class="text-button" id="choose-folder">폴더 선택</button><button class="text-button" id="load-sample-submissions">샘플 코드 불러오기</button></div><span class="supported-files">ZIP · JS · PY · JAVA · C++ 등 <span>·</span> 최대 50MB</span></div><div class="file-list-card"><div class="file-list-head"><div><strong>업로드 파일</strong><span id="file-list-count">0개</span></div><button id="clear-submissions" class="small-text-button">모두 삭제</button></div><div id="submission-file-list" class="submission-file-list"><div class="empty-files"><span>▤</span>업로드한 파일이 여기에 표시됩니다.</div></div></div></div>
+            <aside class="submission-aside"><div class="aside-card naming-card"><div class="aside-card-title"><span>⌘</span> 파일명 인식 규칙</div><p>파일명 첫 부분의 학번_이름과 문항 번호로 학생별 제출물을 묶습니다.</p><label class="field-label" for="filename-pattern">파일명 패턴</label><input id="filename-pattern" class="text-input mono-input" value="{학번}_{이름}_문제{문항번호}.{확장자}"/><div class="pattern-hint"><span>●</span> 문제1, 문제 1, q1, _1 형식의 문항 번호를 자동 인식합니다.</div><div class="pattern-example"><span>예시</span><code>2024001_김민지_문제1.py</code></div></div><div class="grade-mode-card"><div class="grade-mode-head"><span class="grade-mode-icon">✳</span><div><strong>Wandbox 실행 + Gemini 분석</strong><small id="grade-mode-status">연결 상태 확인 중</small></div><span class="toggle on" aria-hidden="true"><i></i></span></div><p>Wandbox가 입출력 테스트를 실행하고 Gemini가 기준과 복잡도를 평가합니다. Wandbox는 실행 시간·메모리를 제공하지 않습니다.</p><div class="mode-footer"><span>코드가 Wandbox로 전송됩니다</span><span>Wandbox · Gemini</span></div></div><div class="grading-progress" id="grading-progress" hidden><div class="progress-top"><strong>채점 진행 중</strong><span id="progress-label">0 / 0</span></div><div class="progress-track"><span id="progress-bar"></span></div><p id="progress-detail">제출 코드를 분석하고 있습니다.</p></div></aside></div>
+          <div class="bottom-actions"><button class="outline-button" data-go="config"><span>←</span> 이전 단계</button><button class="primary-button" id="start-grading" disabled>일괄 채점 시작 <span>→</span></button></div>
+        </section>
+
+        <section class="tab-panel" id="panel-dashboard">
+          <div class="dashboard-title-row"><div><div class="eyebrow"><span class="eyebrow-line"></span>GRADING RESULTS <span class="eyebrow-id">LIVE REPORT</span></div><h1>채점 결과 <span class="live-badge"><i></i> 최신 결과</span></h1><p>학생별 점수와 문항 피드백을 확인하고 결과를 내보내세요.</p></div><div class="export-actions"><button class="primary-button export-button" id="export-xlsx"><span>↧</span> Excel 다운로드</button><button class="outline-button export-button" id="export-csv">CSV 다운로드</button></div></div>
+          <div class="stats-grid"><div class="stat-card"><span>채점 완료</span><strong id="stat-complete">0<span>명</span></strong><small><i class="stat-dot green"></i>전체 제출자</small><span class="stat-watermark">✓</span></div><div class="stat-card"><span>평균 점수</span><strong id="stat-average">—<span>점</span></strong><small><i class="stat-dot blue"></i>전체 문항 평균</small><span class="stat-watermark">∿</span></div><div class="stat-card"><span>최고 점수</span><strong id="stat-high">—<span>점</span></strong><small><i class="stat-dot orange"></i>가장 높은 총점</small><span class="stat-watermark">↗</span></div><div class="stat-card"><span>검토 필요</span><strong id="stat-review">0<span>건</span></strong><small><i class="stat-dot purple"></i>교수자 확인 권장</small><span class="stat-watermark">◉</span></div></div>
+          <div class="results-card"><div class="results-toolbar"><div><h2>학생별 성적표</h2><span id="results-subtitle">채점 결과가 이곳에 표시됩니다.</span></div><div class="results-tools"><label class="search-box"><span>⌕</span><input id="result-search" placeholder="이름 또는 학번 검색" /></label><select id="status-filter" class="filter-select"><option value="all">모든 상태</option><option value="완료">채점 완료</option><option value="검토 필요">검토 필요</option></select></div></div><div class="table-scroll"><table class="results-table"><thead id="results-head"></thead><tbody id="results-body"></tbody></table></div><div class="table-footer"><span id="table-count">총 0명</span><span>점수를 선택하면 상세 리포트를 확인할 수 있습니다.</span></div></div>
+          <p class="tie-break-note">순위는 총점순이며, 총점 동점이면 Wandbox 통과 테스트 수로 순위를 정합니다. 순위 아래에 동점 조정 사유가 표시됩니다. Wandbox API는 실행 시간과 메모리를 제공하지 않습니다.</p>
+          <section class="awards-card"><div class="awards-heading"><div><span class="section-kicker">AWARD ALLOCATION</span><h2>수상 기준과 선정 결과</h2><p>예: 금상 1명·은상 2명·동상 3명은 1위·2~3위·4~6위 구간으로 배정합니다.</p></div><button class="add-button" id="add-award"><span>＋</span> 상 추가</button></div><div class="award-rules" id="award-rules"></div><p class="award-tie-note">동점자가 수상 구간에 있으면 공동 수상으로 설정 인원보다 많아질 수 있습니다. 검토 필요 학생은 점수 확인 후 확정해 주세요.</p><div class="award-results" id="award-results"></div></section>
+          <div class="bottom-actions dashboard-actions"><button class="outline-button" data-go="submissions"><span>←</span> 제출물로 돌아가기</button><button class="text-button" data-go="config">루브릭 수정 <span>→</span></button></div>
+        </section>
+        <footer class="page-footer"><span>© 2025 RUBRIC STUDIO</span><span>Built for fairer code assessment <i>✳</i></span><span>도움이 필요하신가요? <a href="#" id="footer-help">가이드</a></span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="report-modal" hidden><section class="report-modal" role="dialog" aria-modal="true" aria-labelledby="report-title"><header class="modal-header"><div><span class="section-kicker">STUDENT REPORT</span><h2 id="report-title">학생 상세 리포트</h2></div><button class="modal-close" id="close-report" aria-label="닫기">×</button></header><div class="modal-student" id="modal-student"></div><div class="report-content" id="report-content"></div></section></div>
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+</body>
+</html>

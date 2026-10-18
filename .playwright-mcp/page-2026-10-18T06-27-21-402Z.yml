@@ -1,0 +1,200 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "Rubric 홈" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e6]
+        - generic [ref=e10]: rubric.
+        - generic [ref=e11]: STUDIO
+      - generic [ref=e12]: WORKSPACE
+      - button "CS 컴퓨터과학부 개인 워크스페이스 ⌄" [ref=e13] [cursor=pointer]:
+        - generic [ref=e14]: CS
+        - generic [ref=e15]:
+          - strong [ref=e16]: 컴퓨터과학부
+          - generic [ref=e17]: 개인 워크스페이스
+        - generic [ref=e18]: ⌄
+      - generic [ref=e19]: 채점 작업
+      - navigation "주요 메뉴" [ref=e20]:
+        - button "01 시험 설정 ✓" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: "01"
+          - generic [ref=e23]: 시험 설정
+          - generic [ref=e24]: ✓
+        - button "02 제출물 채점 3" [ref=e363] [cursor=pointer]:
+          - generic [ref=e26]: "02"
+          - generic [ref=e27]: 제출물 채점
+          - generic [ref=e28]: "3"
+        - button "03 결과 대시보드" [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]: "03"
+          - generic [ref=e31]: 결과 대시보드
+      - generic [ref=e33]: 현재 시험
+      - generic [ref=e36]:
+        - strong [ref=e37]: 알고리즘 실기 평가
+        - generic [ref=e38]: 3개 문항 · 100점 만점
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: ✳
+          - generic [ref=e43]: AI ENGINE
+        - strong [ref=e45]: Gemini Flash
+        - paragraph [ref=e46]: 서버 키 설정됨 · 요청 시 권한 확인
+        - button "연결 도움말 ↗" [ref=e47] [cursor=pointer]
+      - generic [ref=e48]:
+        - generic [ref=e49]: 김
+        - generic [ref=e50]:
+          - strong [ref=e51]: 김서연
+          - generic [ref=e52]: 교수자 계정
+        - button "계정 메뉴" [ref=e53] [cursor=pointer]: ···
+    - main [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]: 내 워크스페이스
+          - generic [ref=e58]: /
+          - strong [ref=e59]: 코드 채점 스튜디오
+        - generic [ref=e60]:
+          - generic [ref=e61]: 자동 저장됨
+          - button "알림" [ref=e63] [cursor=pointer]: ♧
+          - generic [ref=e65]: 김
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - text: ASSESSMENT WORKSPACE
+              - generic [ref=e71]: "# EX-2025-04"
+            - heading "제출물 채점" [level=1] [ref=e287]
+            - paragraph [ref=e73]: 학생 코드를 업로드하고 루브릭에 따라 평가하세요.
+          - button "↻ 샘플 루브릭 적용" [ref=e74] [cursor=pointer]:
+            - generic [ref=e75]: ↻
+            - text: 샘플 루브릭 적용
+        - generic [ref=e288]:
+          - generic [ref=e289]:
+            - generic [ref=e290]:
+              - generic [ref=e291]: ✓
+              - generic [ref=e292]:
+                - strong [ref=e293]: 문제 & 채점 기준
+                - generic [ref=e294]: 평가 루브릭 구성
+            - generic [ref=e296]:
+              - generic [ref=e297]: "02"
+              - generic [ref=e298]:
+                - strong [ref=e299]: 제출물 업로드
+                - generic [ref=e300]: 학생 파일 가져오기
+            - generic [ref=e302]:
+              - generic [ref=e303]: "03"
+              - generic [ref=e304]:
+                - strong [ref=e305]: 결과 검토
+                - generic [ref=e306]: 리포트 및 내보내기
+          - generic [ref=e307]:
+            - generic [ref=e308]:
+              - text: STUDENT SUBMISSIONS
+              - heading "학생 제출물" [level=2] [ref=e309]
+              - paragraph [ref=e310]: 학생별 코드 파일을 업로드하면 문항별로 자동 분류합니다.
+            - generic [ref=e311]: 9개 파일 · 3명
+          - generic [ref=e312]:
+            - generic [ref=e313]:
+              - generic [ref=e314]:
+                - generic [ref=e318]: ↥
+                - heading "제출 파일을 여기에 놓으세요" [level=3] [ref=e319]
+                - paragraph [ref=e320]:
+                  - text: ZIP 파일 또는 제출 폴더를 업로드할 수 있습니다.
+                  - text: 학생별·문항별 파일이 자동으로 정리됩니다.
+                - generic [ref=e321]:
+                  - button "ZIP / 파일 선택" [ref=e322] [cursor=pointer]
+                  - button "폴더 선택" [ref=e323] [cursor=pointer]
+                  - button "샘플 코드 불러오기" [ref=e324] [cursor=pointer]
+                - generic [ref=e325]: ZIP · JS · PY · JAVA · C++ 등 · 최대 50MB
+              - generic [ref=e326]:
+                - generic [ref=e327]:
+                  - generic [ref=e328]:
+                    - strong [ref=e329]: 업로드 파일
+                    - generic [ref=e330]: 9개
+                  - button "모두 삭제" [ref=e331] [cursor=pointer]
+                - generic [ref=e332]:
+                  - generic [ref=e364]:
+                    - generic [ref=e365]: py
+                    - generic [ref=e366]:
+                      - strong [ref=e367]: sample-submissions/2024001_김민지_문제3.py
+                      - generic [ref=e368]: 김민지 · 0.5 KB
+                    - generic [ref=e369]: 2024001 · 문제 3
+                  - generic [ref=e370]:
+                    - generic [ref=e371]: py
+                    - generic [ref=e372]:
+                      - strong [ref=e373]: sample-submissions/2024001_김민지_문제1.py
+                      - generic [ref=e374]: 김민지 · 1.1 KB
+                    - generic [ref=e375]: 2024001 · 문제 1
+                  - generic [ref=e376]:
+                    - generic [ref=e377]: py
+                    - generic [ref=e378]:
+                      - strong [ref=e379]: sample-submissions/2024001_김민지_문제2.py
+                      - generic [ref=e380]: 김민지 · 1.3 KB
+                    - generic [ref=e381]: 2024001 · 문제 2
+                  - generic [ref=e382]:
+                    - generic [ref=e383]: py
+                    - generic [ref=e384]:
+                      - strong [ref=e385]: sample-submissions/2024002_이준호_문제2.py
+                      - generic [ref=e386]: 이준호 · 1.3 KB
+                    - generic [ref=e387]: 2024002 · 문제 2
+                  - generic [ref=e388]:
+                    - generic [ref=e389]: py
+                    - generic [ref=e390]:
+                      - strong [ref=e391]: sample-submissions/2024002_이준호_문제1.py
+                      - generic [ref=e392]: 이준호 · 1.3 KB
+                    - generic [ref=e393]: 2024002 · 문제 1
+                  - generic [ref=e394]:
+                    - generic [ref=e395]: py
+                    - generic [ref=e396]:
+                      - strong [ref=e397]: sample-submissions/2024002_이준호_문제3.py
+                      - generic [ref=e398]: 이준호 · 0.3 KB
+                    - generic [ref=e399]: 2024002 · 문제 3
+                  - generic [ref=e400]:
+                    - generic [ref=e401]: py
+                    - generic [ref=e402]:
+                      - strong [ref=e403]: sample-submissions/2024003_박서연_문제2.py
+                      - generic [ref=e404]: 박서연 · 1.3 KB
+                    - generic [ref=e405]: 2024003 · 문제 2
+                  - generic [ref=e406]:
+                    - generic [ref=e407]: py
+                    - generic [ref=e408]:
+                      - strong [ref=e409]: sample-submissions/2024003_박서연_문제3.py
+                      - generic [ref=e410]: 박서연 · 0.3 KB
+                    - generic [ref=e411]: 2024003 · 문제 3
+                  - generic [ref=e412]:
+                    - generic [ref=e413]: py
+                    - generic [ref=e414]:
+                      - strong [ref=e415]: sample-submissions/2024003_박서연_문제1.py
+                      - generic [ref=e416]: 박서연 · 0.6 KB
+                    - generic [ref=e417]: 2024003 · 문제 1
+            - complementary [ref=e335]:
+              - generic [ref=e336]:
+                - generic [ref=e337]:
+                  - generic [ref=e338]: ⌘
+                  - text: 파일명 인식 규칙
+                - paragraph [ref=e339]: 파일명 첫 부분의 학번_이름과 문항 번호로 학생별 제출물을 묶습니다.
+                - generic [ref=e340]: 파일명 패턴
+                - textbox "파일명 패턴" [ref=e341]: "{학번}_{이름}_문제{문항번호}.{확장자}"
+                - generic [ref=e342]: ● 문제1, 문제 1, q1, _1 형식의 문항 번호를 자동 인식합니다.
+                - generic [ref=e343]:
+                  - generic [ref=e344]: 예시
+                  - code [ref=e345]: 2024001_김민지_문제1.py
+              - generic [ref=e346]:
+                - generic [ref=e347]:
+                  - generic [ref=e348]: ✳
+                  - generic [ref=e349]:
+                    - strong [ref=e350]: Wandbox 실행 + Gemini 분석
+                    - generic [ref=e351]: Gemini 점수 분석 · Wandbox 테스트
+                - paragraph [ref=e354]: Wandbox가 입출력 테스트를 실행하고 Gemini가 기준과 복잡도를 평가합니다. Wandbox는 실행 시간·메모리를 제공하지 않습니다.
+                - generic [ref=e355]:
+                  - generic [ref=e356]: 코드가 Wandbox로 전송됩니다
+                  - generic [ref=e357]: Wandbox · Gemini
+          - generic [ref=e358]:
+            - button "← 이전 단계" [ref=e359] [cursor=pointer]:
+              - generic [ref=e360]: ←
+              - text: 이전 단계
+            - button "일괄 채점 시작 →" [ref=e361] [cursor=pointer]:
+              - text: 일괄 채점 시작
+              - generic [ref=e362]: →
+        - generic [ref=e282]:
+          - generic [ref=e283]: © 2025 RUBRIC STUDIO
+          - generic [ref=e284]: Built for fairer code assessment ✳
+          - generic [ref=e285]:
+            - text: 도움이 필요하신가요?
+            - link "가이드" [ref=e286] [cursor=pointer]:
+              - /url: "#"
+  - generic [ref=e419]: 9개 파일을 3명에게 분류했습니다. 학번·이름을 분류했습니다.

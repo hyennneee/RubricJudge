@@ -1,0 +1,349 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - link "Rubric 홈" [ref=e4] [cursor=pointer]:
+      - /url: "#"
+      - img [ref=e6]
+      - generic [ref=e10]: rubric.
+      - generic [ref=e11]: STUDIO
+    - generic [ref=e12]: WORKSPACE
+    - button "CS 컴퓨터과학부 개인 워크스페이스 ⌄" [ref=e13] [cursor=pointer]:
+      - generic [ref=e14]: CS
+      - generic [ref=e15]:
+        - strong [ref=e16]: 컴퓨터과학부
+        - generic [ref=e17]: 개인 워크스페이스
+      - generic [ref=e18]: ⌄
+    - generic [ref=e19]: 채점 작업
+    - navigation "주요 메뉴" [ref=e20]:
+      - button "01 시험 설정 ✓" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: "01"
+        - generic [ref=e23]: 시험 설정
+        - generic [ref=e24]: ✓
+      - button "02 제출물 채점 0" [ref=e25] [cursor=pointer]:
+        - generic [ref=e26]: "02"
+        - generic [ref=e27]: 제출물 채점
+        - generic [ref=e28]: "0"
+      - button "03 결과 대시보드" [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]: "03"
+        - generic [ref=e31]: 결과 대시보드
+    - generic [ref=e33]: 현재 시험
+    - generic [ref=e36]:
+      - strong [ref=e37]: 알고리즘 실기 평가
+      - generic [ref=e38]: 3개 문항 · 100점 만점
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: ✳
+        - generic [ref=e43]: AI ENGINE
+      - strong [ref=e45]: Gemini Flash
+      - paragraph [ref=e46]: 서버 키 설정됨 · 요청 시 권한 확인
+      - button "연결 도움말 ↗" [ref=e47] [cursor=pointer]
+    - generic [ref=e48]:
+      - generic [ref=e49]: 김
+      - generic [ref=e50]:
+        - strong [ref=e51]: 김서연
+        - generic [ref=e52]: 교수자 계정
+      - button "계정 메뉴" [ref=e53] [cursor=pointer]: ···
+  - main [ref=e54]:
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e57]: 내 워크스페이스
+        - generic [ref=e58]: /
+        - strong [ref=e59]: 코드 채점 스튜디오
+      - generic [ref=e60]:
+        - generic [ref=e61]: 자동 저장됨
+        - button "알림" [ref=e63] [cursor=pointer]: ♧
+        - generic [ref=e65]: 김
+    - generic [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - text: ASSESSMENT WORKSPACE
+            - generic [ref=e71]: "# EX-2025-04"
+          - heading "시험 설정" [level=1] [ref=e72]
+          - paragraph [ref=e73]: 채점 기준을 정의하고 학생 코드를 일관되게 평가하세요.
+        - button "↻ 샘플 루브릭 적용" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: ↻
+          - text: 샘플 루브릭 적용
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: "01"
+            - generic [ref=e80]:
+              - strong [ref=e81]: 문제 & 채점 기준
+              - generic [ref=e82]: 평가 루브릭 구성
+          - generic [ref=e84]:
+            - generic [ref=e85]: "02"
+            - generic [ref=e86]:
+              - strong [ref=e87]: 제출물 업로드
+              - generic [ref=e88]: 학생 파일 가져오기
+          - generic [ref=e90]:
+            - generic [ref=e91]: "03"
+            - generic [ref=e92]:
+              - strong [ref=e93]: 결과 검토
+              - generic [ref=e94]: 리포트 및 내보내기
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - generic [ref=e98]:
+                - text: EXAM SETUP
+                - heading "시험 기본 정보" [level=2] [ref=e99]
+                - paragraph [ref=e100]: 이번 평가를 구분할 이름과 시험 자료를 등록하세요.
+              - generic [ref=e101]: 자동 저장
+            - generic [ref=e103] [cursor=pointer]:
+              - generic [ref=e104]: ↑
+              - generic [ref=e105]:
+                - strong [ref=e106]: 시험지 PDF를 올리면 문항과 채점 기준을 자동으로 등록합니다
+                - generic [ref=e107]: PDF를 끌어다 놓거나 선택하세요. 문항, 배점, 필수 함수, 복잡도, 테스트 기준을 추출해 기존 목록을 교체합니다.
+              - button "PDF 파일 선택" [ref=e108]
+            - generic [ref=e109]:
+              - generic [ref=e110]: 시험 이름
+              - textbox "시험 이름" [ref=e111]:
+                - /placeholder: "예: 자료구조 중간고사"
+                - text: 알고리즘 실기 평가
+              - generic [ref=e112]:
+                - generic [ref=e113]: 업로드한 파일명으로 자동 설정되며 수정할 수 있습니다.
+                - generic [ref=e114]: 3개 문항 · 100점
+            - generic [ref=e115]:
+              - generic [ref=e116]:
+                - text: SCORING RUBRIC
+                - heading "문항 및 채점 기준 03" [level=2] [ref=e117]
+                - paragraph [ref=e118]: PDF에서 추출한 기준을 확인하고 필요하면 수정하세요.
+              - button "＋ 문항 추가" [ref=e119] [cursor=pointer]
+            - generic [ref=e120]:
+              - article [ref=e121]:
+                - generic [ref=e122]:
+                  - generic [ref=e123]: "01"
+                  - textbox "문항명" [ref=e124]: 문제 1 - 퍼셉트론 구현
+                  - generic [ref=e125]:
+                    - spinbutton "배점" [ref=e126]: "40"
+                    - generic [ref=e127]: 점
+                  - button "문항 삭제" [ref=e128] [cursor=pointer]: ×
+                - generic [ref=e129]:
+                  - generic [ref=e130]:
+                    - text: 정확성 채점 기준
+                    - textbox "정확성 채점 기준" [ref=e131]:
+                      - /placeholder: 정답, 예외 처리, 필수 요구사항별 배점
+                      - text: 가중치와 편향을 사용해 입력을 계산합니다. 학습률을 반영해 가중치를 갱신합니다.
+                  - generic [ref=e132]:
+                    - text: 필수 함수 목록
+                    - textbox "필수 함수 목록" [ref=e133]:
+                      - /placeholder: "예: calculate_sum, step_function"
+                      - text: calculate_sum, step_function, train
+                  - generic [ref=e134]:
+                    - generic [ref=e135]:
+                      - generic [ref=e136]: 효율성 채점 기준
+                      - generic [ref=e137]:
+                        - text: 배점
+                        - spinbutton "효율성 배점" [ref=e138]: "10"
+                        - text: 점
+                    - textbox "시간·공간 복잡도를 나눠 적고, 항목별 배점을 명시하세요." [ref=e139]: calculate_sum 시간 복잡도 O(N) (4점) train 시간 복잡도 O(NE) (6점)
+                    - generic [ref=e140]: 효율성 배점은 총점 안에 포함되고, 나머지는 정확성 배점으로 채점합니다.
+                  - generic [ref=e141]:
+                    - text: 시간·공간 복잡도 기준
+                    - textbox "시간·공간 복잡도 기준" [ref=e142]:
+                      - /placeholder: 기대 시간·공간 복잡도, 입력 크기, 허용 가능한 대안
+                      - text: 학습 데이터 수 N, 반복 횟수 E에 대해 O(NE) 권장
+                  - generic [ref=e143]:
+                    - text: 테스트 케이스·입출력
+                    - textbox "테스트 케이스·입출력" [ref=e144]:
+                      - /placeholder: "예: 입력 1, 2 → 출력 3"
+                      - text: AND 게이트 입력에서 [1, 1]은 1, [0, 0]은 0을 반환
+                  - generic [ref=e145]:
+                    - generic [ref=e146]:
+                      - generic [ref=e147]:
+                        - strong [ref=e148]: Wandbox 자동 실행 테스트
+                        - generic [ref=e149]: 프로그램의 표준 입력과 출력을 비교합니다.
+                      - button "＋ 테스트 추가" [ref=e150] [cursor=pointer]
+                    - generic [ref=e152]:
+                      - generic [ref=e153]: "01"
+                      - generic [ref=e154]:
+                        - text: 입력
+                        - textbox "입력" [ref=e155]:
+                          - /placeholder: 프로그램 stdin
+                          - text: "{\"trainingData\":[{\"inputs\":[0,0],\"label\":0},{\"inputs\":[0,1],\"label\":0},{\"inputs\":[1,0],\"label\":0},{\"inputs\":[1,1],\"label\":1}],\"epochs\":30,\"learningRate\":0.1}"
+                      - generic [ref=e156]:
+                        - text: 예상 출력
+                        - textbox "예상 출력" [ref=e157]:
+                          - /placeholder: 정확히 일치해야 하는 stdout
+                          - text: "{\"predictions\": [0, 0, 0, 1]}"
+                      - button "테스트 삭제" [ref=e158] [cursor=pointer]: ×
+                    - generic [ref=e159]: 표준 입력·출력 프로그램에 사용하세요. 함수만 제출하는 문제는 별도 실행 코드가 필요합니다. 제출 코드는 Wandbox에 전송되어 실행됩니다.
+                  - generic [ref=e160]:
+                    - text: 정답 예시 또는 추가 기준
+                    - textbox "정답 예시 또는 추가 기준" [ref=e161]:
+                      - /placeholder: "선택 사항: 정답 코드, 예외 처리 기준, 부분 점수 기준"
+              - article [ref=e162]:
+                - generic [ref=e163]:
+                  - generic [ref=e164]: "02"
+                  - textbox "문항명" [ref=e165]: 문제 2 - 최단 경로 탐색
+                  - generic [ref=e166]:
+                    - spinbutton "배점" [ref=e167]: "35"
+                    - generic [ref=e168]: 점
+                  - button "문항 삭제" [ref=e169] [cursor=pointer]: ×
+                - generic [ref=e170]:
+                  - generic [ref=e171]:
+                    - text: 정확성 채점 기준
+                    - textbox "정확성 채점 기준" [ref=e172]:
+                      - /placeholder: 정답, 예외 처리, 필수 요구사항별 배점
+                      - text: 가중치가 음수가 아닌 그래프에서 시작점부터 모든 정점까지 최단 거리를 구합니다.
+                  - generic [ref=e173]:
+                    - text: 필수 함수 목록
+                    - textbox "필수 함수 목록" [ref=e174]:
+                      - /placeholder: "예: calculate_sum, step_function"
+                      - text: dijkstra, reconstruct_path
+                  - generic [ref=e175]:
+                    - generic [ref=e176]:
+                      - generic [ref=e177]: 효율성 채점 기준
+                      - generic [ref=e178]:
+                        - text: 배점
+                        - spinbutton "효율성 배점" [ref=e179]: "13"
+                        - text: 점
+                    - textbox "시간·공간 복잡도를 나눠 적고, 항목별 배점을 명시하세요." [ref=e180]: 우선순위 큐를 사용해 O((V + E) log V) 달성 (9점) 인접 리스트를 사용해 O(V + E) 공간 유지 (4점)
+                    - generic [ref=e181]: 효율성 배점은 총점 안에 포함되고, 나머지는 정확성 배점으로 채점합니다.
+                  - generic [ref=e182]:
+                    - text: 시간·공간 복잡도 기준
+                    - textbox "시간·공간 복잡도 기준" [ref=e183]:
+                      - /placeholder: 기대 시간·공간 복잡도, 입력 크기, 허용 가능한 대안
+                      - text: 인접 리스트와 우선순위 큐를 사용해 O((V + E) log V)
+                  - generic [ref=e184]:
+                    - text: 테스트 케이스·입출력
+                    - textbox "테스트 케이스·입출력" [ref=e185]:
+                      - /placeholder: "예: 입력 1, 2 → 출력 3"
+                      - text: 연결되지 않은 정점은 무한대 또는 명확한 미도달 값으로 표시
+                  - generic [ref=e186]:
+                    - generic [ref=e187]:
+                      - generic [ref=e188]:
+                        - strong [ref=e189]: Wandbox 자동 실행 테스트
+                        - generic [ref=e190]: 프로그램의 표준 입력과 출력을 비교합니다.
+                      - button "＋ 테스트 추가" [ref=e191] [cursor=pointer]
+                    - generic [ref=e193]:
+                      - generic [ref=e194]: "01"
+                      - generic [ref=e195]:
+                        - text: 입력
+                        - textbox "입력" [ref=e196]:
+                          - /placeholder: 프로그램 stdin
+                          - text: "{\"graph\":{\"A\":[[\"B\",1],[\"C\",4]],\"B\":[[\"C\",2],[\"D\",5]],\"C\":[[\"D\",1]],\"D\":[]},\"start\":\"A\"}"
+                      - generic [ref=e197]:
+                        - text: 예상 출력
+                        - textbox "예상 출력" [ref=e198]:
+                          - /placeholder: 정확히 일치해야 하는 stdout
+                          - text: "{\"distances\": {\"A\": 0, \"B\": 1, \"C\": 3, \"D\": 4}, \"paths\": {\"A\": [\"A\"], \"B\": [\"A\", \"B\"], \"C\": [\"A\", \"B\", \"C\"], \"D\": [\"A\", \"B\", \"C\", \"D\"]}}"
+                      - button "테스트 삭제" [ref=e199] [cursor=pointer]: ×
+                    - generic [ref=e200]: 표준 입력·출력 프로그램에 사용하세요. 함수만 제출하는 문제는 별도 실행 코드가 필요합니다. 제출 코드는 Wandbox에 전송되어 실행됩니다.
+                  - generic [ref=e201]:
+                    - text: 정답 예시 또는 추가 기준
+                    - textbox "정답 예시 또는 추가 기준" [ref=e202]:
+                      - /placeholder: "선택 사항: 정답 코드, 예외 처리 기준, 부분 점수 기준"
+              - article [ref=e203]:
+                - generic [ref=e204]:
+                  - generic [ref=e205]: "03"
+                  - textbox "문항명" [ref=e206]: 문제 3 - 괄호 문자열 검증
+                  - generic [ref=e207]:
+                    - spinbutton "배점" [ref=e208]: "25"
+                    - generic [ref=e209]: 점
+                  - button "문항 삭제" [ref=e210] [cursor=pointer]: ×
+                - generic [ref=e211]:
+                  - generic [ref=e212]:
+                    - text: 정확성 채점 기준
+                    - textbox "정확성 채점 기준" [ref=e213]:
+                      - /placeholder: 정답, 예외 처리, 필수 요구사항별 배점
+                      - text: "중첩된 (), [], {} 괄호가 올바른 순서로 짝을 이루는지 판별합니다."
+                  - generic [ref=e214]:
+                    - text: 필수 함수 목록
+                    - textbox "필수 함수 목록" [ref=e215]:
+                      - /placeholder: "예: calculate_sum, step_function"
+                      - text: is_valid
+                  - generic [ref=e216]:
+                    - generic [ref=e217]:
+                      - generic [ref=e218]: 효율성 채점 기준
+                      - generic [ref=e219]:
+                        - text: 배점
+                        - spinbutton "효율성 배점" [ref=e220]: "15"
+                        - text: 점
+                    - textbox "시간·공간 복잡도를 나눠 적고, 항목별 배점을 명시하세요." [ref=e221]: 문자열을 한 번 순회해 O(N) 시간 달성 (8점) 필요한 괄호만 스택에 보관해 O(N) 공간 이내 유지 (7점)
+                    - generic [ref=e222]: 효율성 배점은 총점 안에 포함되고, 나머지는 정확성 배점으로 채점합니다.
+                  - generic [ref=e223]:
+                    - text: 시간·공간 복잡도 기준
+                    - textbox "시간·공간 복잡도 기준" [ref=e224]:
+                      - /placeholder: 기대 시간·공간 복잡도, 입력 크기, 허용 가능한 대안
+                      - text: 시간 O(N), 공간 O(N) 이내
+                  - generic [ref=e225]:
+                    - text: 테스트 케이스·입출력
+                    - textbox "테스트 케이스·입출력" [ref=e226]:
+                      - /placeholder: "예: 입력 1, 2 → 출력 3"
+                      - text: "{[()]}는 유효, ([)] 및 닫히지 않은 괄호는 유효하지 않음"
+                  - generic [ref=e227]:
+                    - generic [ref=e228]:
+                      - generic [ref=e229]:
+                        - strong [ref=e230]: Wandbox 자동 실행 테스트
+                        - generic [ref=e231]: 프로그램의 표준 입력과 출력을 비교합니다.
+                      - button "＋ 테스트 추가" [ref=e232] [cursor=pointer]
+                    - generic [ref=e233]:
+                      - generic [ref=e234]:
+                        - generic [ref=e235]: "01"
+                        - generic [ref=e236]:
+                          - text: 입력
+                          - textbox "입력" [ref=e237]:
+                            - /placeholder: 프로그램 stdin
+                            - text: "{[()]}"
+                        - generic [ref=e238]:
+                          - text: 예상 출력
+                          - textbox "예상 출력" [ref=e239]:
+                            - /placeholder: 정확히 일치해야 하는 stdout
+                            - text: "true"
+                        - button "테스트 삭제" [ref=e240] [cursor=pointer]: ×
+                      - generic [ref=e241]:
+                        - generic [ref=e242]: "02"
+                        - generic [ref=e243]:
+                          - text: 입력
+                          - textbox "입력" [ref=e244]:
+                            - /placeholder: 프로그램 stdin
+                            - text: ([)]
+                        - generic [ref=e245]:
+                          - text: 예상 출력
+                          - textbox "예상 출력" [ref=e246]:
+                            - /placeholder: 정확히 일치해야 하는 stdout
+                            - text: "false"
+                        - button "테스트 삭제" [ref=e247] [cursor=pointer]: ×
+                    - generic [ref=e248]: 표준 입력·출력 프로그램에 사용하세요. 함수만 제출하는 문제는 별도 실행 코드가 필요합니다. 제출 코드는 Wandbox에 전송되어 실행됩니다.
+                  - generic [ref=e249]:
+                    - text: 정답 예시 또는 추가 기준
+                    - textbox "정답 예시 또는 추가 기준" [ref=e250]:
+                      - /placeholder: "선택 사항: 정답 코드, 예외 처리 기준, 부분 점수 기준"
+            - generic [ref=e251]:
+              - generic [ref=e252]: ✓ 변경 내용이 이 브라우저에 저장됩니다.
+              - button "제출물 설정으로 →" [ref=e253] [cursor=pointer]:
+                - text: 제출물 설정으로
+                - generic [ref=e254]: →
+          - complementary [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257]:
+                - generic [ref=e258]: ◈
+                - text: 평가 요약
+              - generic [ref=e259]:
+                - strong [ref=e260]: "100"
+                - generic [ref=e261]: 점 만점
+              - generic [ref=e264]:
+                - generic [ref=e265]:
+                  - generic [ref=e266]: 문항 수
+                  - strong [ref=e267]: "03"
+                - generic [ref=e268]:
+                  - generic [ref=e269]: 문항당 평균
+                  - strong [ref=e270]: 33.3점
+              - paragraph [ref=e272]:
+                - generic [ref=e273]: ✳
+                - text: 배점 합계가 100점이 아니어도 괜찮아요. 모든 점수는 자동으로 환산됩니다.
+            - generic [ref=e274]:
+              - generic [ref=e275]: ✦
+              - strong [ref=e276]: 좋은 루브릭을 만드는 팁
+              - paragraph [ref=e277]: 필수 함수와 동작 조건을 구체적으로 작성하면 더 일관된 채점 결과를 얻을 수 있어요.
+              - button "가이드 보기 →" [ref=e278] [cursor=pointer]
+            - generic [ref=e279]:
+              - generic [ref=e280]: ▣
+              - paragraph [ref=e281]: 학생 코드와 시험 내용은 평가를 위해 Wandbox와 Gemini로 전송됩니다. 외부 전송이 허용된 자료만 올려 주세요.
+      - generic [ref=e282]:
+        - generic [ref=e283]: © 2025 RUBRIC STUDIO
+        - generic [ref=e284]: Built for fairer code assessment ✳
+        - generic [ref=e285]:
+          - text: 도움이 필요하신가요?
+          - link "가이드" [ref=e286] [cursor=pointer]:
+            - /url: "#"
